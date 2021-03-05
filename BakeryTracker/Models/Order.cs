@@ -8,10 +8,10 @@ namespace BakeryTracker.Models
     public string Title { get; set; }
     public string Description { get; set; }
     public string Date { get; set; }
-    public int Price { get; set; }
+    public string Price { get; set; }
     public int OrderId { get; }
     private static List<Order> _instances = new List<Order> {};
-    public Order(string title, string description, string date, int price)
+    public Order(string title, string description, string date, string price)
     {
       Title = title;
       Description = description;
@@ -30,6 +30,11 @@ namespace BakeryTracker.Models
     public static void ClearAll()
     {
       _instances.Clear();
+    }
+
+    public static Order Find(int searchId)
+    {
+      return _instances[searchId-1];
     }
   }
 }

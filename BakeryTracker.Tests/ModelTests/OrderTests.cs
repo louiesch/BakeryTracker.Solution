@@ -16,7 +16,7 @@ namespace BakeryTracker.Tests
     [TestMethod]
     public void OrderConstructor_CreatesInstanceOfOrder_Order()
     {
-      Order newOrder = new Order("test", "test", "March 5th 2021", 5);
+      Order newOrder = new Order("test", "test", "March 5th 2021", "$5");
       Assert.AreEqual(typeof(Order), newOrder.GetType());
     }
 
@@ -26,7 +26,7 @@ namespace BakeryTracker.Tests
       string title = "title of order";
       string description = "description of order";
       string date = "order date";
-      int price = 5;
+      string price = "$5";
       Order newOrder = new Order(title, description, date, price);
       int result = newOrder.OrderId;
       Assert.AreEqual(1, result);
@@ -38,7 +38,7 @@ namespace BakeryTracker.Tests
       string title = "title of order";
       string description = "description of order";
       string date = "order date";
-      int price = 5;
+      string price = "$5";
       Order newOrder = new Order(title, description, date, price);
       string result = newOrder.Description;
       Assert.AreEqual(description, result);
@@ -50,7 +50,7 @@ namespace BakeryTracker.Tests
       string title = "title of order";
       string description = "description of order";
       string date = "order date";
-      int price = 5;
+      string price = "$5";
       Order newOrder = new Order(title, description, date, price);
       string updatedDescription = "Wow we've got a new description";
       newOrder.Description = updatedDescription;
@@ -75,8 +75,8 @@ namespace BakeryTracker.Tests
       string description2 = "10 loaves of bread, 20 pastries";
       string date1 = "date1";
       string date2 = "date2";
-      int price1 = 20;
-      int price2 = 50;
+      string price1 = "$20";
+      string price2 = "$50";
       Order newOrder1 = new Order(title1, description1, date1, price1);
       Order newOrder2 = new Order(title2, description2, date2, price2);
       List<Order> newList = new List<Order> { newOrder1, newOrder2 };
