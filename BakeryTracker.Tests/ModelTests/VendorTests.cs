@@ -60,13 +60,29 @@ namespace BakeryTracker.Tests
     {
       string vendorName1 = "Biscuit Bonanaza";
       string vendorName2 = "Louie's Bakery";
-      string vendorDescription1 = "100 biscuits";
-      string vendorDescription2 = "10 cakes, 4 pastries";
+      string vendorDescription1 = "100 biscuits every 2 days";
+      string vendorDescription2 = "10 cakes, 4 pastries on a biweekly basis";
       Vendor newVendor1 = new Vendor(vendorName1, vendorDescription1);
       Vendor newVendor2 = new Vendor(vendorName2, vendorDescription2);
       Vendor result = Vendor.Find(2);
       Assert.AreEqual(newVendor2, result);
     }
 
+    [TestMethod]
+    public void AddOrder_AssociatesOrderWithVendor_OrderList()
+    {
+    string title = "title of order";
+    string description = "So many cakes";
+    string date = "order date";
+    string price = "$5";
+    Order newOrder = new Order(title, description, date, price);
+    List<Order> newList = new List<Order> { newOrder };
+    string vendorName = "Louie's Bakery";
+    string vendorDescription = "Usually orders way too many cakes";
+    Vendor newVendor = new Vendor(vendorName, vendorDescription);
+    newVendor.AddOrder(newOrder);
+    List<Order> result = newVendor.Orders;
+    CollectionAssert.AreEqual(newList, result);
+    }
   }
 }
