@@ -10,10 +10,15 @@ namespace BakeryTracker.Models
     public string Date { get; set; }
     public int Price { get; set; }
     public int OrderId { get; }
+    private static List <Order> _instances = new List<Order> {};
     public Order(string title, string description, string date, int price)
     {
       Title = title;
       Description = description;
+      Date = date;
+      Price = price;
+      _instances.Add(this);
+      OrderId = _instances.Count;
 
     }
   }
