@@ -7,17 +7,11 @@ namespace BakeryTracker.Controllers
   public class OrdersController : Controller
   {
 
-    [HttpGet("/orders/new")]
-    public ActionResult New()
+    [HttpGet("/vendors/{vendorId}/orders/new")]
+    public ActionResult New(int vendorId)
     {
-      return View();
-    }
-
-    [HttpPost("/orders")]
-    public ActionResult Create(string title, string description, string date, string price)
-    {
-      Order myOrder = new Order(title, description, date, price);
-      return RedirectToAction("Index");
+      Vendor vendor = Vendor.Find(vendorId);
+      return View(vendor);
     }
 
     [HttpPost("/orders/delete")]
