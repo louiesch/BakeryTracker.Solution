@@ -15,5 +15,7 @@ namespace BakeryTracker.Tests
       Assert.AreEqual(typeof(Vendor), newVendor.GetType());
     }
 
+    
+
   }
 }

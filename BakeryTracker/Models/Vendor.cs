@@ -4,17 +4,18 @@ namespace BakeryTracker.Models
 {
   public class Vendor
   {
-    private static List<Vendor> _vendorInstances = new List<Vendor> {};
     public string VendorName { get; set; }
     public string VendorDescription { get; set; }
-    public int Id { get; }
+    public int VendorId { get; }
+    private static List<Vendor> _instances = new List<Vendor> {};
     public List<Order> Orders { get; set; }
 
     public Vendor(string vendorName, string vendorDescription)
     {
       VendorName = vendorName;
       VendorDescription = vendorDescription;
-      _vendorInstances.Add(this);
+      _instances.Add(this);
+      VendorId = _instances.Count;
       Orders = new List<Order>{};
     }
   }

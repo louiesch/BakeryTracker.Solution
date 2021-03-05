@@ -21,18 +21,6 @@ namespace BakeryTracker.Tests
     }
 
     [TestMethod]
-    public void GetId_OrderInstantiateWithIdAndGetterReturns_Int()
-    {
-      string title = "title of order";
-      string description = "description of order";
-      string date = "order date";
-      string price = "$5";
-      Order newOrder = new Order(title, description, date, price);
-      int result = newOrder.OrderId;
-      Assert.AreEqual(1, result);
-    }
-
-    [TestMethod]
     public void GetOrderProperties_ReturnsOrderDescription_String()
     {
       string title = "title of order";
@@ -83,6 +71,22 @@ namespace BakeryTracker.Tests
       List<Order> result = Order.GetAll();
       CollectionAssert.AreEqual(newList, result);
     }
+
+    [TestMethod]
+    public void GetId_OrdersInstantiateWithIdAndGetterReturns_Int()
+    {
+      string title = "title of order";
+      string description = "description of order";
+      string date = "order date";
+      string price = "$5";
+      Order newOrder = new Order(title, description, date, price);
+      int result = newOrder.OrderId;
+      Assert.AreEqual(1, result);
+    }
+
+
+
+
 
   }
 }
