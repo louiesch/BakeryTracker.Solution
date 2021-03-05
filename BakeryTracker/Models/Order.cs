@@ -19,7 +19,11 @@ namespace BakeryTracker.Models
       Price = price;
       _instances.Add(this);
       OrderId = _instances.Count;
+    }
 
+    public static void ClearAll()
+    {
+      _instances.Clear();
     }
   }
 }
