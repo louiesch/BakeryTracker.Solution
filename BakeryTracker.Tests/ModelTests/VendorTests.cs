@@ -55,5 +55,18 @@ namespace BakeryTracker.Tests
       CollectionAssert.AreEqual(newList, result);
     }
 
+    [TestMethod]
+    public void Find_ReturnsCorrectVendor_Vendor()
+    {
+      string vendorName1 = "Biscuit Bonanaza";
+      string vendorName2 = "Louie's Bakery";
+      string vendorDescription1 = "100 biscuits";
+      string vendorDescription2 = "10 cakes, 4 pastries";
+      Vendor newVendor1 = new Vendor(vendorName1, vendorDescription1);
+      Vendor newVendor2 = new Vendor(vendorName2, vendorDescription2);
+      Vendor result = Vendor.Find(2);
+      Assert.AreEqual(newVendor2, result);
+    }
+
   }
 }
