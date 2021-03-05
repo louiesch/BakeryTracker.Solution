@@ -66,5 +66,23 @@ namespace BakeryTracker.Tests
       CollectionAssert.AreEqual(newList, result);
     }
 
+    [TestMethod]
+    public void GetAll_ReturnsOrders_OrderList()
+    {
+      string title1 = "Catering";
+      string title2 = "Mom's Day Bash";
+      string description1 = "3 loaves of bread, 10 pastries";
+      string description2 = "10 loaves of bread, 20 pastries";
+      string date1 = "date1";
+      string date2 = "date2";
+      int price1 = 20;
+      int price2 = 50;
+      Order newOrder1 = new Order(title1, description1, date1, price1);
+      Order newOrder2 = new Order(title2, description2, date2, price2);
+      List<Order> newList = new List<Order> { newOrder1, newOrder2 };
+      List<Order> result = Order.GetAll();
+      CollectionAssert.AreEqual(newList, result);
+    }
+
   }
 }
