@@ -10,7 +10,7 @@ namespace BakeryTracker.Models
     public string Date { get; set; }
     public int Price { get; set; }
     public int OrderId { get; }
-    private static List <Order> _instances = new List<Order> {};
+    private static List<Order> _instances = new List<Order> {};
     public Order(string title, string description, string date, int price)
     {
       Title = title;
@@ -20,6 +20,12 @@ namespace BakeryTracker.Models
       _instances.Add(this);
       OrderId = _instances.Count;
     }
+
+    public static List<Order> GetAll()
+    {
+      return _instances;
+    }
+    
 
     public static void ClearAll()
     {
