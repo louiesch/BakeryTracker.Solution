@@ -27,7 +27,7 @@ namespace BakeryTracker.Controllers
       return RedirectToAction("Index");
     }
 
-    [HttpPost]
+    [HttpPost("/orders/delete")]
     public ActionResult DeleteAll()
     {
       Order.ClearAll();
