@@ -25,5 +25,15 @@ namespace BakeryTracker.Tests
       Assert.AreEqual(vendorName, result);
     }
 
+    [TestMethod]
+    public void GetVendorId_ReturnsVendor_Int()
+    {
+      string vendorName = "test vendor";
+      string vendorDescription = "test description";
+      Vendor newVendor = new Vendor(vendorName, vendorDescription);
+      int result = newVendor.VendorId;
+      Assert.AreEqual(1, result);
+    }
+
   }
 }
