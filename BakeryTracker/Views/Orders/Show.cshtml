@@ -1,8 +1,10 @@
-<h1>@Model.Title details: </h1>
+<h1>Bakery Tracker Order Details: </h1>
 
-<h2>Order description: @Model.Description</h2>
-<h3>Date ordered: @Model.Date</h3>
-<h3>Order total: @Model.Price</h3>
+<h2>Vendor: @Model["vendor"].Name</h2>
+<h2>Order title: @Model["order"].Title</h2>
+<h2>Order description: @Model["order"].Description</h2>
+<h3>Date ordered: @Model["order"].Date</h3>
+<h3>Order total: @Model["order"].Price</h3>
 
 <a href='/orders/new'>Add another order</a>
 <a href='/orders'>View all orders</a>
