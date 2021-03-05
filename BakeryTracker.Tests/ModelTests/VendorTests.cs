@@ -13,7 +13,7 @@ namespace BakeryTracker.Tests
     {
       Vendor.ClearAll();
     }
-    
+
     [TestMethod]
     public void VendorConstructor_CreatesInstanceOfVendor_Vendor()
     {
@@ -39,6 +39,20 @@ namespace BakeryTracker.Tests
       Vendor newVendor = new Vendor(vendorName, vendorDescription);
       int result = newVendor.VendorId;
       Assert.AreEqual(1, result);
+    }
+
+    [TestMethod]
+    public void GetAll_ReturnsAllVendorObjects_VendorList()
+    {
+      string vendorName1 = "Biscuit Bonanaza";
+      string vendorName2 = "Louie's Bakery";
+      string vendorDescription1 = "100 biscuits";
+      string vendorDescription2 = "10 cakes, 4 pastries";
+      Vendor newVendor1 = new Vendor(vendorName1, vendorDescription1);
+      Vendor newVendor2 = new Vendor(vendorName2, vendorDescription2);
+      List<Vendor> newList = new List<Vendor> { newVendor1, newVendor2 };
+      List<Vendor> result = Vendor.GetAll();
+      CollectionAssert.AreEqual(newList, result);
     }
 
   }
