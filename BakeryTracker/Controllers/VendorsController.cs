@@ -44,7 +44,7 @@ namespace BakeryTracker.Controllers
 
     }
 
-    [HttpGet("/vendors/{id}")]
+    [HttpGet("/vendors/{vendorId}")]
     public ActionResult Show(int id)
     {
       Dictionary<string, object> model = new Dictionary<string, object>();
