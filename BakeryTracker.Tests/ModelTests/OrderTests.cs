@@ -84,6 +84,23 @@ namespace BakeryTracker.Tests
       Assert.AreEqual(1, result);
     }
 
+    [TestMethod]
+    public void Find_ReturnsCorrectOrder_Order()
+    {
+      string title1 = "Catering";
+      string title2 = "Mom's Day Bash";
+      string description1 = "3 loaves of bread, 10 pastries";
+      string description2 = "10 loaves of bread, 20 pastries";
+      string date1 = "date1";
+      string date2 = "date2";
+      string price1 = "$20";
+      string price2 = "$50";
+      Order newOrder1 = new Order(title1, description1, date1, price1);
+      Order newOrder2 = new Order(title2, description2, date2, price2);
+      Order result = Order.Find(2);
+      Assert.AreEqual(newOrder2, result);
+    }
+
 
 
 

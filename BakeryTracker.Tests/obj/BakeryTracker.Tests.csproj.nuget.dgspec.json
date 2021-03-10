@@ -1,0 +1,133 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/louiesch/Desktop/BakeryTracker.Solution/BakeryTracker.Tests/BakeryTracker.Tests.csproj": {}
+  },
+  "projects": {
+    "/Users/louiesch/Desktop/BakeryTracker.Solution/BakeryTracker.Tests/BakeryTracker.Tests.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/louiesch/Desktop/BakeryTracker.Solution/BakeryTracker.Tests/BakeryTracker.Tests.csproj",
+        "projectName": "BakeryTracker.Tests",
+        "projectPath": "/Users/louiesch/Desktop/BakeryTracker.Solution/BakeryTracker.Tests/BakeryTracker.Tests.csproj",
+        "packagesPath": "/Users/louiesch/.nuget/packages/",
+        "outputPath": "/Users/louiesch/Desktop/BakeryTracker.Solution/BakeryTracker.Tests/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/louiesch/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp5.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "netcoreapp5.0",
+            "projectReferences": {
+              "/Users/louiesch/Desktop/BakeryTracker.Solution/BakeryTracker/BakeryTracker.csproj": {
+                "projectPath": "/Users/louiesch/Desktop/BakeryTracker.Solution/BakeryTracker/BakeryTracker.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "netcoreapp5.0",
+          "dependencies": {
+            "MSTest.TestAdapter": {
+              "target": "Package",
+              "version": "[1.2.0, )"
+            },
+            "MSTest.TestFramework": {
+              "target": "Package",
+              "version": "[1.2.0, )"
+            },
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[15.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.100/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/louiesch/Desktop/BakeryTracker.Solution/BakeryTracker/BakeryTracker.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/louiesch/Desktop/BakeryTracker.Solution/BakeryTracker/BakeryTracker.csproj",
+        "projectName": "BakeryTracker",
+        "projectPath": "/Users/louiesch/Desktop/BakeryTracker.Solution/BakeryTracker/BakeryTracker.csproj",
+        "packagesPath": "/Users/louiesch/.nuget/packages/",
+        "outputPath": "/Users/louiesch/Desktop/BakeryTracker.Solution/BakeryTracker/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/louiesch/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp5.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "netcoreapp5.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "netcoreapp5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.100/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
