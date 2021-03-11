@@ -30,12 +30,12 @@ namespace BakeryTracker.Controllers
 
 
     //this Create() creates new Orders within a given Vendor
-    [HttpPost("/vendors/{vendorId}/orders/new")]
-    public ActionResult Create(int vendorId, string orderTitle, string orderDescription, string orderDate, string orderPrice)
+    [HttpPost("/vendors/{vendorId}/orders")]
+    public ActionResult Create(int vendorId, string Title, string Description, string Date, string Price)
     {
       Dictionary<string, object> model = new Dictionary<string, object>();
       Vendor foundVendor = Vendor.Find(vendorId);
-      Order newOrder = new Order(orderTitle, orderDescription, orderDate, orderPrice);
+      Order newOrder = new Order(Title, Description, Date, Price);
       foundVendor.AddOrder(newOrder);
       List<Order> vendorOrders = foundVendor.Orders;
       model.Add("orders", vendorOrders);

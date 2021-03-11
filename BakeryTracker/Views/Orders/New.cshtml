@@ -1,8 +1,8 @@
 <h1>Add an order</h1>
-<p>Add a new order to @Model.Name</p>
+<p>Add a new order to @Model.VendorName</p>
 
-<form action="/vendors/@Model.Id/orders" method="post">
-  <input id ="vendorId" name="vendorId" type="hidden" value = "@Model.Id">
+<form action="/vendors/@Model.VendorId/orders" method="post">
+  <input id ="vendorId" name="vendorId" type="hidden" value = "@Model.VendorId">
   <label for="title">Order title</label>
   <input id="title" name="title" type="text">
   <label for="description">Description of order</label>
@@ -14,6 +14,5 @@
   <button type="submit">Add Item</button>
 </form>
 
-<p><a href="/vendors/orders">Orders</a></p>
 <p><a href="/vendors">Vendors</a></p>
 <p><a href="/">Home Page</a></p>
