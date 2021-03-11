@@ -31,7 +31,7 @@ _This project was created to practice using C# and ASP.NET Core MVC while follow
 * _To run the program, while still in production folder BakeryTracker type into the terminal:_
   >dotnet run
 
-* _Note: The server will not open automatically. The user will need to click on the link in terminal, or enter local host URL into browser._
+* _Note: The server will not open automatically. The user will need to click on the link in terminal, or enter the URL localhost:5000 into browser._
 
 
 * _To run tests: Navigate from the root directory to the BakeryTracker.Tests directory. Then in terminal, type:_
